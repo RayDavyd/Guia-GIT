@@ -30,18 +30,6 @@
   --transition: 0.25s ease;
 }
 
-/* ---------- Tema claro ---------- */
-[data-theme="light"]{
-  --bg: #f6f8fa;
-  --bg-soft: #ffffff;
-  --bg-elevated: #ffffff;
-  --line: #d8dee4;
-  --text: #1f2328;
-  --text-muted: #57606a;
-  --code-text: #c43e22;
-  --shadow: 0 10px 30px -18px rgba(0,0,0,.25);
-}
-
 /* ---------- Reset básico ---------- */
 *,*::before,*::after{ box-sizing: border-box; }
 html{ scroll-behavior: smooth; }

@@ -1,33 +1,4 @@
-
 (function () {
-  // ---------- Tema claro / escuro ----------
-  const root = document.documentElement;
-  const stored = localStorage.getItem('git-academy-theme');
-
-  if (stored) {
-    root.setAttribute('data-theme', stored);
-  }
-
-  function updateToggleIcon() {
-    const btn = document.querySelector('.theme-toggle');
-    if (!btn) return;
-    const isLight = root.getAttribute('data-theme') === 'light';
-    btn.textContent = isLight ? '☀️' : '🌙';
-    btn.setAttribute('aria-label', isLight ? 'Ativar modo escuro' : 'Ativar modo claro');
-  }
-
-  function toggleTheme() {
-    const current = root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
-    const next = current === 'light' ? 'dark' : 'light';
-    if (next === 'dark') {
-      root.removeAttribute('data-theme');
-    } else {
-      root.setAttribute('data-theme', 'light');
-    }
-    localStorage.setItem('git-academy-theme', next);
-    updateToggleIcon();
-  }
-
   // ---------- Menu mobile ----------
   function toggleNav() {
     const links = document.querySelector('.nav-links');
@@ -35,11 +6,6 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    updateToggleIcon();
-
-    const themeBtn = document.querySelector('.theme-toggle');
-    if (themeBtn) themeBtn.addEventListener('click', toggleTheme);
-
     const navBtn = document.querySelector('.nav-toggle');
     if (navBtn) navBtn.addEventListener('click', toggleNav);
   });
