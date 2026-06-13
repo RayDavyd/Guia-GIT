@@ -155,7 +155,80 @@
   </div>
 </section>
 
+<div class="divider"></div>
 
+<!-- INSTALAÇÃO -->
+<section id="instalacao">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Guia rápido</span>
+      <h2>Instalação do Git</h2>
+      <p>Selecione o seu sistema operativo para ver os passos de instalação.</p>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="windows">Windows</button>
+      <button class="tab-btn" data-tab="mac">macOS</button>
+      <button class="tab-btn" data-tab="linux">Linux</button>
+    </div>
+
+    <div class="tab-panel active" id="windows">
+      <div class="card">
+        <h3>Windows</h3>
+        <p>1. Aceda ao site oficial e descarregue o instalador (Git for Windows).</p>
+        <p>2. Execute o instalador e mantenha as opções padrão recomendadas.</p>
+        <p>3. Ao concluir, abra o <strong>Git Bash</strong> e confirme a instalação:</p>
+        <pre><code>git --version</code></pre>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="mac">
+      <div class="card">
+        <h3>macOS</h3>
+        <p>1. A forma mais simples é usar o <strong>Homebrew</strong>:</p>
+        <pre><code>brew install git</code></pre>
+        <p>2. Alternativamente, instalar as "Command Line Tools" do Xcode também inclui o Git.</p>
+        <p>3. Verifique a instalação:</p>
+        <pre><code>git --version</code></pre>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="linux">
+      <div class="card">
+        <h3>Linux</h3>
+        <p>1. Em distribuições baseadas em Debian/Ubuntu:</p>
+        <pre><code>sudo apt update
+sudo apt install git</code></pre>
+        <p>2. Em distribuições baseadas em Fedora:</p>
+        <pre><code>sudo dnf install git</code></pre>
+        <p>3. Verifique a instalação:</p>
+        <pre><code>git --version</code></pre>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px;">
+      <h3>Configuração inicial recomendada</h3>
+      <p>Depois de instalar, configure o seu nome e e-mail — eles serão associados a todos os seus commits:</p>
+      <pre><code>git config --global user.name "Seu Nome"
+git config --global user.email "seu@email.com"</code></pre>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">Git Academy</div>
+      <div class="footer-team">
+        <span>Gustavo Pires</span>
+        <span>Ray David</span>
+        <span>Luan Ribeiro</span>
+        <span>Luciana</span>
+      </div>
+    </div>
+    <div class="footer-bottom">Projeto académico — Guia de Git &amp; GitHub © 2026</div>
+  </div>
+</footer>
 
 <script src="js/main.js"></script>
 </body>
