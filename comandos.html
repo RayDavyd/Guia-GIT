@@ -63,6 +63,49 @@
   </div>
 </section>
 
+<!--CONFIGURAÇÃO INICIAL-->
+<section id="config">
+  <div class="container">
+    <div class="cmd-group active grid cols-2" data-group="config">
+
+      <div class="card cmd-card">
+        <span class="badge">Configuração</span>
+        <h3>Definir o nome de utilizador</h3>
+        <p>Define o nome que aparecerá nos seus commits, globalmente em todos os repositórios.</p>
+        <pre><code>git config --global user.name "Seu Nome"</code></pre>
+        <button class="copy-btn">copiar</button>
+      </div>
+
+      <div class="card cmd-card">
+        <span class="badge">Configuração</span>
+        <h3>Definir o e-mail</h3>
+        <p>Associa um e-mail à sua identidade Git — deve coincidir com o do GitHub.</p>
+        <pre><code>git config --global user.email "seu@email.com"</code></pre>
+        <button class="copy-btn">copiar</button>
+      </div>
+
+      <div class="card cmd-card">
+        <span class="badge">Configuração</span>
+        <h3>Listar configurações</h3>
+        <p>Mostra todas as configurações atuais do Git (globais e locais).</p>
+        <pre><code>git config --list</code></pre>
+        <button class="copy-btn">copiar</button>
+      </div>
+
+      <div class="card cmd-card">
+        <span class="badge">Configuração</span>
+        <h3>Editor padrão</h3>
+        <p>Define o editor de texto usado para mensagens de commit, por exemplo o VS Code.</p>
+        <pre><code>git config --global core.editor "code --wait"</code></pre>
+        <button class="copy-btn">copiar</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!--FOOTER-->
 <footer class="footer">
   <div class="container">
