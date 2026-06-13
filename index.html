@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia de Git | Git Academy</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <span class="logo-dot"><span>git</span></span> Git Academy
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Introdução</a></li>
+      <li><a href="comandos.html">Comandos</a></li>
+      <li><a href="branch.html">Branches</a></li>
+      <li><a href="github.html">Git &amp; GitHub</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-toggle" title="Abrir menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container hero-container">
+    <div class="hero-text">
+      <span class="eyebrow">Módulo 01 </span>
+      <h1>O que é o <span class="text-orange">Git</span>?</h1>
+      <p class="lead">
+        Antes de aprender comandos, é preciso entender o problema que o Git resolve.
+        Este módulo explica o conceito de controlo de versões, a história do Git
+        e como instalá-lo no seu sistema.
+      </p>
+      <div class="actions">
+        <a href="#controlo-versao" class="btn primary">Começar a leitura</a>
+        <a href="comandos.html" class="btn ghost">Ir para os comandos →</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="img/Git-Icon-White.png" alt="Logo do Git" class="git-float">
+    </div>
+  </div>
+</header>
+
+<div class="divider"></div>
+
+<!-- CONTROLO DE VERSÃO -->
+<section id="controlo-versao">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Conceito</span>
+      <h2>Controlo de versão: Centralizado vs. Distribuído</h2>
+      <p>
+        Um sistema de controlo de versões (VCS) regista o histórico de alterações
+        de um conjunto de ficheiros, permitindo voltar atrás, comparar versões e
+        colaborar sem perder trabalho.
+      </p>
+    </div>
+
+    <div class="grid cols-2">
+      <div class="card">
+        <div class="icon"><i data-lucide="server"></i></div>
+        <h3>Centralizado (CVCS)</h3>
+        <p>
+          Existe <strong>um único servidor central</strong> que guarda todo o
+          histórico do projeto. Os utilizadores obtêm apenas a versão mais
+          recente dos ficheiros. Se o servidor falhar, o histórico pode
+          perder-se. Exemplo: <code>SVN</code>, <code>CVS</code>.
+        </p>
+      </div>
+      <div class="card">
+        <div class="icon"><i data-lucide="network"></i></div>
+        <h3>Distribuído (DVCS)</h3>
+        <p>
+          Cada colaborador tem uma <strong>cópia completa</strong> do repositório,
+          incluindo todo o histórico. É possível trabalhar offline, criar
+          ramos (branches) livremente e sincronizar depois com outros.
+          O Git é o exemplo mais usado.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HISTÓRIA -->
+<section id="historia">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">História</span>
+      <h2>Uma breve linha do tempo</h2>
+      <p>Do colapso de uma parceria de licenciamento ao sistema mais usado no mundo.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="year">2002</span>
+        <h4>BitKeeper</h4>
+        <p>O kernel do Linux passa a usar o sistema proprietário BitKeeper para gerir o seu código-fonte distribuído.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="year">2005</span>
+        <h4>Nasce o Git</h4>
+        <p>Após o fim do acordo de licença gratuita do BitKeeper, Linus Torvalds cria o Git em poucas semanas, com foco em velocidade e suporte a fluxos de trabalho distribuídos.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="year">2008</span>
+        <h4>Surge o GitHub</h4>
+        <p>É lançada uma plataforma na nuvem para hospedar repositórios Git, popularizando a colaboração open-source através de Pull Requests.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="year">Hoje</span>
+        <h4>Padrão da indústria</h4>
+        <p>O Git tornou-se a ferramenta de controlo de versões mais usada por equipas de desenvolvimento em todo o mundo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- VANTAGENS -->
+<section id="vantagens">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Por que usar</span>
+      <h2>Vantagens do Git</h2>
+    </div>
+
+    <div class="grid cols-4">
+      <div class="card">
+        <div class="icon"><i data-lucide="zap"></i></div>
+        <h3>Velocidade</h3>
+        <p>Operações como commit, diff e branch são executadas localmente, sem depender da rede.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><i data-lucide="git-branch"></i></div>
+        <h3>Branching leve</h3>
+        <p>Criar e alternar entre ramos é rápido e barato, incentivando experimentação segura.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><i data-lucide="shield"></i></div> 
+        <h3>Segurança do histórico</h3>
+        <p>Cada cópia do repositório contém o histórico completo, funcionando como backup natural.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><i data-lucide="users"></i></div>  
+        <h3>Colaboração</h3>
+        <p>Várias pessoas podem trabalhar em paralelo e depois combinar o trabalho de forma controlada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- INSTALAÇÃO -->
+<section id="instalacao">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Guia rápido</span>
+      <h2>Instalação do Git</h2>
+      <p>Selecione o seu sistema operativo para ver os passos de instalação.</p>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="windows">Windows</button>
+      <button class="tab-btn" data-tab="mac">macOS</button>
+      <button class="tab-btn" data-tab="linux">Linux</button>
+    </div>
+
+    <div class="tab-panel active" id="windows">
+      <div class="card">
+        <h3>Windows</h3>
+        <p>1. Aceda ao site oficial e descarregue o instalador (Git for Windows).</p>
+        <p>2. Execute o instalador e mantenha as opções padrão recomendadas.</p>
+        <p>3. Ao concluir, abra o <strong>Git Bash</strong> e confirme a instalação:</p>
+        <pre><code>git --version</code></pre>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="mac">
+      <div class="card">
+        <h3>macOS</h3>
+        <p>1. A forma mais simples é usar o <strong>Homebrew</strong>:</p>
+        <pre><code>brew install git</code></pre>
+        <p>2. Alternativamente, instalar as "Command Line Tools" do Xcode também inclui o Git.</p>
+        <p>3. Verifique a instalação:</p>
+        <pre><code>git --version</code></pre>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="linux">
+      <div class="card">
+        <h3>Linux</h3>
+        <p>1. Em distribuições baseadas em Debian/Ubuntu:</p>
+        <pre><code>sudo apt update
+sudo apt install git</code></pre>
+        <p>2. Em distribuições baseadas em Fedora:</p>
+        <pre><code>sudo dnf install git</code></pre>
+        <p>3. Verifique a instalação:</p>
+        <pre><code>git --version</code></pre>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px;">
+      <h3>Configuração inicial recomendada</h3>
+      <p>Depois de instalar, configure o seu nome e e-mail — eles serão associados a todos os seus commits:</p>
+      <pre><code>git config --global user.name "Seu Nome"
+git config --global user.email "seu@email.com"</code></pre>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <div class="footer-brand">
+            Git Academy
+          </div>
+          <p class="footer-desc">Projeto desenvolvido por alunos do curso de Análise e Desenvolvimento de Sistemas do Instituto Federal da Paraíba — IFPB.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Equipe</h4>
+          <ul class="footer-list">
+            <li>Gustavo Pires</li>
+            <li>Ray David</li>
+            <li>Luan Ribeiro</li>
+            <li>Luciana</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Contato</h4>
+          <p class="footer-email"><i data-lucide="mail"></i> gitacademy@gmail.com.br</p>
+          <div class="footer-socials">
+            <a href="#" title="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.165c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="#" title="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" title="Discord">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      Projeto acadêmico — Guia de Git &amp; GitHub © 2026 · IFPB Campus Cajazeiras
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
