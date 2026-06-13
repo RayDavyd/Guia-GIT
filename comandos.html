@@ -1,216 +1,236 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comandos do Git | Git Academy</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comandos do Git | Git Academy</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <!--NAVBAR-->
-    <nav class="navbar">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-brand">
-                <span class="logo-dot">git</span> Git Academy
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Introdução</a></li>
-                <li><a href="comandos.html" class="active">Comandos</a></li>
-                <li><a href="branch.html">Branches</a></li>
-                <li><a href="github.html">Git &amp; GitHub</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle" title="Alternar tema">🌙</button>
-                <button class="nav-toggle" title="Abrir menu">☰</button>
-            </div>
-        </div>
-    </nav>
+<!--NAVBAR-->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <span class="logo-dot">git</span> Git Academy
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Introdução</a></li>
+      <li><a href="comandos.html" class="active">Comandos</a></li>
+      <li><a href="branch.html">Branches</a></li>
+      <li><a href="github.html">Git &amp; GitHub</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" title="Alternar tema">🌙</button>
+      <button class="nav-toggle" title="Abrir menu">☰</button>
+    </div>
+  </div>
+</nav>
 
-    <!--HERO-->
-    <header class="hero">
-        <div class="container">
-            <span class="eyebrow">Módulo 02 · Integrante 2</span>
-            <h1>Cheat Sheet de <span class="text-orange">Comandos</span></h1>
-            <p class="lead">
-                Um guia rápido e visual com os comandos essenciais do dia a dia:
-                configuração inicial, ciclo de vida dos ficheiros e consulta do histórico.
-                Clique em qualquer comando para copiar.
-            </p>
-            <div class="actions">
-                <a href="branch.html" class="btn primary">Avançar para Branches →</a>
-                <a href="index.html" class="btn ghost">← Voltar à Introdução</a>
-            </div>
-        </div>
-    </header>
+<!--HERO-->
+<header class="hero">
+  <div class="container">
+    <span class="eyebrow">Módulo 02 · Integrante 2</span>
+    <h1>Cheat Sheet de <span class="text-orange">Comandos</span></h1>
+    <p class="lead">
+      Um guia rápido e visual com os comandos essenciais do dia a dia:
+      configuração inicial, ciclo de vida dos ficheiros e consulta do histórico.
+      Clique em qualquer comando para copiar.
+    </p>
+    <div class="actions">
+      <a href="branch.html" class="btn primary">Avançar para Branches →</a>
+      <a href="index.html" class="btn ghost">← Voltar à Introdução</a>
+    </div>
+  </div>
+</header>
 
-    <div class="divider"></div>
+<div class="divider"></div>
 
-    <!--FILTROS-->
-    <section style="padding-bottom:0;">
-        <div class="container">
-            <div class="section-head">
-                <span class="eyebrow">Cheat Sheet</span>
-                <h2>Filtrar por categoria</h2>
-                <p>Escolha uma categoria para ver os comandos relacionados.</p>
-            </div>
-            <div class="filter-bar">
-                <button class="filter-btn active" data-group="config">⚙️ Configuração</button>
-                <button class="filter-btn" data-group="ciclo">🔄 Ciclo de vida</button>
-                <button class="filter-btn" data-group="historico">🕓 Histórico &amp; Diff</button>
-                <button class="filter-btn" data-group="all">📋 Ver todos</button>
-            </div>
-        </div>
-    </section>
+<!--FILTROS-->
+<section style="padding-bottom:0;">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Cheat Sheet</span>
+      <h2>Filtrar por categoria</h2>
+      <p>Escolha uma categoria para ver os comandos relacionados.</p>
+    </div>
+    <div class="filter-bar">
+      <button class="filter-btn active" data-group="config">⚙️ Configuração</button>
+      <button class="filter-btn" data-group="ciclo">🔄 Ciclo de vida</button>
+      <button class="filter-btn" data-group="historico">🕓 Histórico &amp; Diff</button>
+      <button class="filter-btn" data-group="all">📋 Ver todos</button>
+    </div>
+  </div>
+</section>
 
-    <!--CONFIGURAÇÃO INICIAL-->
-    <section id="config">
-        <div class="container">
-            <div class="cmd-group active grid cols-2" data-group="config">
+<!--CONFIGURAÇÃO INICIAL-->
+<section id="config">
+  <div class="container">
+    <div class="cmd-group active grid cols-2" data-group="config">
 
-                <div class="card cmd-card">
-                    <span class="badge">Configuração</span>
-                    <h3>Definir o nome de utilizador</h3>
-                    <p>Define o nome que aparecerá nos seus commits, globalmente em todos os repositórios.</p>
-                    <pre><code>git config --global user.name "Seu Nome"</code></pre>
-                    <button class="copy-btn">copiar</button>
-                </div>
+      <div class="card cmd-card">
+        <span class="badge">Configuração</span>
+        <h3>Definir o nome de utilizador</h3>
+        <p>Define o nome que aparecerá nos seus commits, globalmente em todos os repositórios.</p>
+        <pre><code>git config --global user.name "Seu Nome"</code></pre>
+        <button class="copy-btn">copiar</button>
+      </div>
 
-                <div class="card cmd-card">
-                    <span class="badge">Configuração</span>
-                    <h3>Definir o e-mail</h3>
-                    <p>Associa um e-mail à sua identidade Git — deve coincidir com o do GitHub.</p>
-                    <pre><code>git config --global user.email "seu@email.com"</code></pre>
-                    <button class="copy-btn">copiar</button>
-                </div>
+      <div class="card cmd-card">
+        <span class="badge">Configuração</span>
+        <h3>Definir o e-mail</h3>
+        <p>Associa um e-mail à sua identidade Git — deve coincidir com o do GitHub.</p>
+        <pre><code>git config --global user.email "seu@email.com"</code></pre>
+        <button class="copy-btn">copiar</button>
+      </div>
 
-                <div class="card cmd-card">
-                    <span class="badge">Configuração</span>
-                    <h3>Listar configurações</h3>
-                    <p>Mostra todas as configurações atuais do Git (globais e locais).</p>
-                    <pre><code>git config --list</code></pre>
-                    <button class="copy-btn">copiar</button>
-                </div>
+      <div class="card cmd-card">
+        <span class="badge">Configuração</span>
+        <h3>Listar configurações</h3>
+        <p>Mostra todas as configurações atuais do Git (globais e locais).</p>
+        <pre><code>git config --list</code></pre>
+        <button class="copy-btn">copiar</button>
+      </div>
 
-                <div class="card cmd-card">
-                    <span class="badge">Configuração</span>
-                    <h3>Editor padrão</h3>
-                    <p>Define o editor de texto usado para mensagens de commit, por exemplo o VS Code.</p>
-                    <pre><code>git config --global core.editor "code --wait"</code></pre>
-                    <button class="copy-btn">copiar</button>
-                </div>
+      <div class="card cmd-card">
+        <span class="badge">Configuração</span>
+        <h3>Editor padrão</h3>
+        <p>Define o editor de texto usado para mensagens de commit, por exemplo o VS Code.</p>
+        <pre><code>git config --global core.editor "code --wait"</code></pre>
+        <button class="copy-btn">copiar</button>
+      </div>
 
-            </div>
-        </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!--CICLO DE VIDA-->
-    <section id="ciclo">
-        <div class="container">
-            <div class="cmd-group grid cols-2" data-group="ciclo">
+<!--CICLO DE VIDA-->
+<section id="ciclo">
+  <div class="container">
+    <div class="cmd-group grid cols-2" data-group="ciclo">
 
-                <div class="card cmd-card">
-                    <span class="badge">Ciclo de vida</span>
-                    <h3>git init</h3>
-                    <p>Inicializa um novo repositório Git na pasta atual, criando a pasta oculta <code>.git</code>.</p>
-                    <pre><code>git init</code></pre>
-                    <button class="copy-btn">copiar</button>
-                </div>
+      <div class="card cmd-card">
+        <span class="badge">Ciclo de vida</span>
+        <h3>git init</h3>
+        <p>Inicializa um novo repositório Git na pasta atual, criando a pasta oculta <code>.git</code>.</p>
+        <pre><code>git init</code></pre>
+        <button class="copy-btn">copiar</button>
+      </div>
 
-                <div class="card cmd-card">
-                    <span class="badge">Ciclo de vida</span>
-                    <h3>git status</h3>
-                    <p>Mostra o estado atual: ficheiros modificados, novos ou prontos para commit.</p>
-                    <pre><code>git status</code></pre>
-                    <button class="copy-btn">copiar</button>
-                </div>
+      <div class="card cmd-card">
+        <span class="badge">Ciclo de vida</span>
+        <h3>git status</h3>
+        <p>Mostra o estado atual: ficheiros modificados, novos ou prontos para commit.</p>
+        <pre><code>git status</code></pre>
+        <button class="copy-btn">copiar</button>
+      </div>
 
-                <div class="card cmd-card">
-                    <span class="badge">Ciclo de vida</span>
-                    <h3>git add</h3>
-                    <p>Move alterações para a "staging area", preparando-as para o próximo commit.</p>
-                    <pre><code>git add ficheiro.txt
+      <div class="card cmd-card">
+        <span class="badge">Ciclo de vida</span>
+        <h3>git add</h3>
+        <p>Move alterações para a "staging area", preparando-as para o próximo commit.</p>
+        <pre><code>git add ficheiro.txt
 git add .   # adiciona tudo</code></pre>
-                    <button class="copy-btn">copiar</button>
-                </div>
+        <button class="copy-btn">copiar</button>
+      </div>
 
-                <div class="card cmd-card">
-                    <span class="badge">Ciclo de vida</span>
-                    <h3>git commit</h3>
-                    <p>Grava as alterações preparadas no histórico, com uma mensagem descritiva.</p>
-                    <pre><code>git commit -m "feat: adiciona pagina inicial"</code></pre>
-                    <button class="copy-btn">copiar</button>
-                </div>
+      <div class="card cmd-card">
+        <span class="badge">Ciclo de vida</span>
+        <h3>git commit</h3>
+        <p>Grava as alterações preparadas no histórico, com uma mensagem descritiva.</p>
+        <pre><code>git commit -m "feat: adiciona pagina inicial"</code></pre>
+        <button class="copy-btn">copiar</button>
+      </div>
 
-            </div>
-        </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!--HISTÓRICO E DIFF-->
-    <section id="historico">
-        <div class="container">
-            <div class="cmd-group grid cols-2" data-group="historico">
+<!--HISTÓRICO E DIFF-->
+<section id="historico">
+  <div class="container">
+    <div class="cmd-group grid cols-2" data-group="historico">
 
-                <div class="card cmd-card">
-                    <span class="badge">Histórico</span>
-                    <h3>git log</h3>
-                    <p>Lista o histórico de commits, do mais recente para o mais antigo.</p>
-                    <pre><code>git log
+      <div class="card cmd-card">
+        <span class="badge">Histórico</span>
+        <h3>git log</h3>
+        <p>Lista o histórico de commits, do mais recente para o mais antigo.</p>
+        <pre><code>git log
 git log --oneline --graph</code></pre>
-                    <button class="copy-btn">copiar</button>
-                </div>
+        <button class="copy-btn">copiar</button>
+      </div>
 
-                <div class="card cmd-card">
-                    <span class="badge">Histórico</span>
-                    <h3>git diff</h3>
-                    <p>Mostra as diferenças entre o estado atual dos ficheiros e o último commit.</p>
-                    <pre><code>git diff
+      <div class="card cmd-card">
+        <span class="badge">Histórico</span>
+        <h3>git diff</h3>
+        <p>Mostra as diferenças entre o estado atual dos ficheiros e o último commit.</p>
+        <pre><code>git diff
 git diff --staged</code></pre>
-                    <button class="copy-btn">copiar</button>
-                </div>
+        <button class="copy-btn">copiar</button>
+      </div>
 
-                <div class="card cmd-card">
-                    <span class="badge">Histórico</span>
-                    <h3>git show</h3>
-                    <p>Mostra os detalhes e as alterações de um commit específico.</p>
-                    <pre><code>git show &lt;hash-do-commit&gt;</code></pre>
-                    <button class="copy-btn">copiar</button>
-                </div>
+      <div class="card cmd-card">
+        <span class="badge">Histórico</span>
+        <h3>git show</h3>
+        <p>Mostra os detalhes e as alterações de um commit específico.</p>
+        <pre><code>git show &lt;hash-do-commit&gt;</code></pre>
+        <button class="copy-btn">copiar</button>
+      </div>
 
-                <div class="card cmd-card">
-                    <span class="badge">Histórico</span>
-                    <h3>git restore</h3>
-                    <p>Descarta alterações não confirmadas num ficheiro, voltando à última versão guardada.</p>
-                    <pre><code>git restore ficheiro.txt</code></pre>
-                    <button class="copy-btn">copiar</button>
-                </div>
+      <div class="card cmd-card">
+        <span class="badge">Histórico</span>
+        <h3>git restore</h3>
+        <p>Descarta alterações não confirmadas num ficheiro, voltando à última versão guardada.</p>
+        <pre><code>git restore ficheiro.txt</code></pre>
+        <button class="copy-btn">copiar</button>
+      </div>
 
-            </div>
-        </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <div class="divider"></div>
+<!--TABELA RESUMO-->
+<div class="divider"></div>
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Resumo</span>
+      <h2>Tabela de referência rápida</h2>
+    </div>
+    <table>
+      <thead>
+        <tr><th>Comando</th><th>Categoria</th><th>Descrição</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>git init</code></td><td>Ciclo de vida</td><td>Cria um novo repositório local</td></tr>
+        <tr><td><code>git status</code></td><td>Ciclo de vida</td><td>Mostra o estado dos ficheiros</td></tr>
+        <tr><td><code>git add</code></td><td>Ciclo de vida</td><td>Prepara ficheiros para commit</td></tr>
+        <tr><td><code>git commit</code></td><td>Ciclo de vida</td><td>Grava alterações no histórico</td></tr>
+        <tr><td><code>git log</code></td><td>Histórico</td><td>Lista o histórico de commits</td></tr>
+        <tr><td><code>git diff</code></td><td>Histórico</td><td>Compara alterações entre versões</td></tr>
+        <tr><td><code>git config</code></td><td>Configuração</td><td>Define preferências globais ou locais</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-    <!--FOOTER-->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-inner">
-                <div class="footer-brand">Git Academy</div>
-                <div class="footer-team">
-                    <span>Integrante 1 · Introdução</span>
-                    <span>Integrante 2 · Comandos</span>
-                    <span>Integrante 3 · Branches</span>
-                    <span>Integrante 4 · GitHub</span>
-                </div>
-            </div>
-            <div class="footer-bottom">Projeto académico — Guia de Git &amp; GitHub © 2026</div>
-        </div>
-    </footer>
+<!--FOOTER-->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">Git Academy</div>
+      <div class="footer-team">
+        <span>Integrante 1 · Introdução</span>
+        <span>Integrante 2 · Comandos</span>
+        <span>Integrante 3 · Branches</span>
+        <span>Integrante 4 · GitHub</span>
+      </div>
+    </div>
+    <div class="footer-bottom">Projeto académico — Guia de Git &amp; GitHub © 2026</div>
+  </div>
+</footer>
 
-    <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 
 </body>
-
 </html>
