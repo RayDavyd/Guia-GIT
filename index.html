@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introdução ao Git | Git Academy</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <span class="logo-dot">git</span> Git Academy
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Introdução</a></li>
+      <li><a href="comandos.html">Comandos</a></li>
+      <li><a href="branch.html">Branches</a></li>
+      <li><a href="github.html">Git &amp; GitHub</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" title="Alternar tema">🌙</button>
+      <button class="nav-toggle" title="Abrir menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <span class="eyebrow">Módulo 01 · Integrante 1</span>
+    <h1>O que é o <span class="text-orange">Git</span>?</h1>
+    <p class="lead">
+      Antes de aprender comandos, é preciso entender o problema que o Git resolve.
+      Este módulo explica o conceito de controlo de versões, a história do Git
+      e como instalá-lo no seu sistema.
+    </p>
+    <div class="actions">
+      <a href="#controlo-versao" class="btn primary">Começar a leitura</a>
+      <a href="comandos.html" class="btn ghost">Ir para os comandos →</a>
+    </div>
+  </div>
+</header>
+
+<div class="divider"></div>
+
+<!-- CONTROLO DE VERSÃO -->
+<section id="controlo-versao">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Conceito</span>
+      <h2>Controlo de versão: Centralizado vs. Distribuído</h2>
+      <p>
+        Um sistema de controlo de versões (VCS) regista o histórico de alterações
+        de um conjunto de ficheiros, permitindo voltar atrás, comparar versões e
+        colaborar sem perder trabalho.
+      </p>
+    </div>
+
+    <div class="grid cols-2">
+      <div class="card">
+        <div class="icon">🗄️</div>
+        <h3>Centralizado (CVCS)</h3>
+        <p>
+          Existe <strong>um único servidor central</strong> que guarda todo o
+          histórico do projeto. Os utilizadores obtêm apenas a versão mais
+          recente dos ficheiros. Se o servidor falhar, o histórico pode
+          perder-se. Exemplo: <code>SVN</code>, <code>CVS</code>.
+        </p>
+      </div>
+      <div class="card">
+        <div class="icon">🌐</div>
+        <h3>Distribuído (DVCS)</h3>
+        <p>
+          Cada colaborador tem uma <strong>cópia completa</strong> do repositório,
+          incluindo todo o histórico. É possível trabalhar offline, criar
+          ramos (branches) livremente e sincronizar depois com outros.
+          O Git é o exemplo mais usado.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
