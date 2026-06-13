@@ -46,6 +46,90 @@
 
 <div class="divider"></div>
 
+<!-- ============ GIT VS GITHUB ============ -->
+<section id="git-vs-github">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Conceito</span>
+      <h2>Git (local) vs. GitHub (nuvem)</h2>
+      <p>É uma confusão comum — mas a diferença é simples.</p>
+    </div>
+
+    <div class="vs-wrap">
+      <div class="card">
+        <div class="icon">💻</div>
+        <h3>Git</h3>
+        <p>
+          É um <strong>software</strong> instalado no seu computador.
+          Controla o histórico de versões dos seus ficheiros de forma
+          totalmente local — funciona mesmo sem internet.
+        </p>
+        <p style="margin-top:10px;">Exemplos de comandos: <code>git init</code>, <code>git commit</code>, <code>git log</code>.</p>
+      </div>
+
+      <div class="vs-divider">VS</div>
+
+      <div class="card">
+        <div class="icon">☁️</div>
+        <h3>GitHub</h3>
+        <p>
+          É uma <strong>plataforma online</strong> que hospeda repositórios
+          Git na nuvem. Acrescenta funcionalidades de colaboração: Pull Requests,
+          Issues, revisão de código e até hospedagem de sites estáticos.
+        </p>
+        <p style="margin-top:10px;">Outros exemplos de plataformas: GitLab, Bitbucket.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ COMANDOS REMOTOS ============ -->
+<section id="comandos-remotos">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Comandos</span>
+      <h2>Conectando local e remoto</h2>
+      <p>Estes comandos ligam o seu repositório local a um repositório no GitHub.</p>
+    </div>
+
+    <div class="grid cols-2">
+      <div class="card">
+        <span class="badge">git remote</span>
+        <h3>Associar um repositório remoto</h3>
+        <p>Cria um "atalho" (normalmente chamado <code>origin</code>) que aponta para o repositório no GitHub.</p>
+        <pre><code>git remote add origin https://github.com/utilizador/projeto.git
+git remote -v   # lista os remotos configurados</code></pre>
+      </div>
+
+      <div class="card">
+        <span class="badge">git clone</span>
+        <h3>Copiar um repositório existente</h3>
+        <p>Cria uma cópia local completa de um repositório que já existe no GitHub.</p>
+        <pre><code>git clone https://github.com/utilizador/projeto.git</code></pre>
+      </div>
+
+      <div class="card">
+        <span class="badge">git push</span>
+        <h3>Enviar alterações</h3>
+        <p>Envia os commits feitos localmente para o repositório remoto.</p>
+        <pre><code>git push origin main
+git push origin feature/minha-tarefa</code></pre>
+      </div>
+
+      <div class="card">
+        <span class="badge">git pull</span>
+        <h3>Obter alterações</h3>
+        <p>Atualiza o repositório local com as alterações mais recentes do remoto.</p>
+        <pre><code>git pull origin main</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <script src="js/main.js"></script>
 </body>
 </html>
