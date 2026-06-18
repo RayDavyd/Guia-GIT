@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branches e Trabalho em Equipe | Git Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ============ NAVBAR ============ -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <span class="logo-dot">git</span> Git Academy
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Introdução</a></li>
+      <li><a href="comandos.html">Comandos</a></li>
+      <li><a href="branch.html" class="active">Branches</a></li>
+      <li><a href="github.html">Git &amp; GitHub</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" title="Alternar tema">🌙</button>
+      <button class="nav-toggle" title="Abrir menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="container">
+    <span class="eyebrow">Módulo 03 · Luciana Silva</span>
+    <h1>Branches &amp; <span class="text-orange">Trabalho em Equipe</span></h1>
+    <p class="lead">
+      Branches permitem que cada pessoa trabalhe numa funcionalidade sem afetar
+      o código dos colegas. Aqui vamos entender o que são, como usá-las e como
+      resolver conflitos quando o trabalho é combinado.
+    </p>
+    <div class="actions">
+      <a href="#branches" class="btn primary">O que são branches?</a>
+      <a href="github.html" class="btn ghost">Avançar para GitHub →</a>
+    </div>
+  </div>
+</header>
+
+<div class="divider"></div>
+
+<!-- ============ O QUE SÃO BRANCHES ============ -->
+<section id="branches">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Conceito</span>
+      <h2>O que são Branches e por que usá-las</h2>
+      <p>
+        Uma <strong>branch</strong> (ramo) é, na prática, um ponteiro móvel que aponta
+        para uma sequência de commits. A branch principal é normalmente chamada
+        <code>main</code>. Criar uma nova branch permite isolar o desenvolvimento
+        de uma funcionalidade sem afetar o código estável.
+      </p>
+    </div>
+
+    <div class="grid cols-3">
+      <div class="card">
+        <div class="icon">🧪</div>
+        <h3>Experimentação segura</h3>
+        <p>Teste novas ideias sem o risco de "partir" o código que já funciona na <code>main</code>.</p>
+      </div>
+      <div class="card">
+        <div class="icon">👥</div>
+        <h3>Trabalho paralelo</h3>
+        <p>Cada integrante da equipa pode desenvolver a sua funcionalidade ao mesmo tempo, em branches separadas.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🔍</div>
+        <h3>Revisão antes de integrar</h3>
+        <p>O código só chega à <code>main</code> depois de revisado, através de um Pull Request.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ COMANDOS ESSENCIAIS ============ -->
+<section id="comandos-branch">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Comandos</span>
+      <h2>Comandos essenciais de Branch</h2>
+    </div>
+
+    <div class="grid cols-2">
+      <div class="card">
+        <span class="badge">git branch</span>
+        <h3>Listar e criar branches</h3>
+        <p>Sem argumentos, lista as branches existentes. Com um nome, cria uma nova branch (sem mudar para ela).</p>
+        <pre><code>git branch              # lista as branches
+git branch nova-feature # cria uma nova branch</code></pre>
+      </div>
+
+      <div class="card">
+        <span class="badge">git switch / checkout</span>
+        <h3>Alternar entre branches</h3>
+        <p><code>switch</code> é a forma moderna e recomendada; <code>checkout -b</code> cria e muda numa só etapa.</p>
+        <pre><code>git switch nova-feature
+git checkout -b nova-feature</code></pre>
+      </div>
+
+      <div class="card">
+        <span class="badge">git merge</span>
+        <h3>Integrar alterações</h3>
+        <p>Junta o histórico de outra branch na branch atual. Normalmente faz-se merge da feature para a <code>main</code>.</p>
+        <pre><code>git switch main
+git merge nova-feature</code></pre>
+      </div>
+
+      <div class="card">
+        <span class="badge">git branch -d</span>
+        <h3>Apagar uma branch</h3>
+        <p>Depois do merge, a branch da funcionalidade pode ser removida em segurança.</p>
+        <pre><code>git branch -d nova-feature</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ FLUXO VISUAL ============ -->
+<section id="fluxo-visual">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Visualização</span>
+      <h2>Como os commits se ramificam</h2>
+      <p>Representação simplificada de uma branch <code>feature</code> criada a partir da <code>main</code> e depois integrada de volta com merge.</p>
+    </div>
+
+    <div class="branch-diagram">
+      <div style="position:relative;">
+        <!-- linha do merge (diagonal simulada com posicionamento) -->
+        <div class="branch-row main">
+          <div class="branch-name">main</div>
+          <div class="line">
+            <span class="label" style="left:5%;">C1</span>
+            <div class="commit-dot" style="left:5%;"></div>
+            <span class="label" style="left:35%;">C2</span>
+            <div class="commit-dot" style="left:35%;"></div>
+            <span class="label" style="left:90%;">C5 (merge)</span>
+            <div class="commit-dot" style="left:90%; width:20px; height:20px; background:var(--orange); border-color:var(--bg-soft);"></div>
+          </div>
+        </div>
+        <div class="branch-row feature">
+          <div class="branch-name">feature/x</div>
+          <div class="line">
+            <span class="label" style="left:15%;">C3</span>
+            <div class="commit-dot" style="left:15%;"></div>
+            <span class="label" style="left:60%;">C4</span>
+            <div class="commit-dot" style="left:60%;"></div>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top:20px; font-size:.85rem;">
+        <strong>C1 → C2</strong>: commits feitos diretamente na <code>main</code>.
+        A partir de <strong>C2</strong>, cria-se a branch <code>feature/x</code>, onde
+        são feitos os commits <strong>C3</strong> e <strong>C4</strong>.
+        Por fim, <strong>C5</strong> é o <em>merge commit</em> que traz o trabalho
+        da <code>feature/x</code> de volta para a <code>main</code>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ CONFLITOS ============ -->
+<section id="conflitos">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Quando algo dá errado</span>
+      <h2>Resolução básica de conflitos de merge</h2>
+      <p>
+        Um conflito ocorre quando a mesma linha de um ficheiro foi alterada de
+        forma diferente em duas branches. O Git marca o ficheiro com marcadores
+        especiais para que a pessoa decida qual versão manter.
+      </p>
+    </div>
+
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>1. O Git assinala o conflito</h3>
+        <p>Ao tentar fazer merge, o ficheiro fica assim:</p>
+        <div class="conflict-box">
+          <div class="conflict-line normal">&lt;h1&gt;Bem-vindo ao projeto&lt;/h1&gt;</div>
+          <div class="conflict-line marker">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</div>
+          <div class="conflict-line head">&lt;p&gt;Versão da branch main&lt;/p&gt;</div>
+          <div class="conflict-line marker">=======</div>
+          <div class="conflict-line incoming">&lt;p&gt;Versão da branch feature/x&lt;/p&gt;</div>
+          <div class="conflict-line marker">&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/x</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>2. Resolver e finalizar</h3>
+        <p>Edite o ficheiro manualmente, escolhendo (ou combinando) o conteúdo correto e removendo os marcadores <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>.</p>
+        <p>Depois, marque o ficheiro como resolvido e finalize o merge:</p>
+        <pre><code>git add index.html
+git commit -m "fix: resolve conflito de merge"</code></pre>
+        <p style="margin-top:10px;">💡 <strong>Dica:</strong> comunicar com a equipa antes de alterar ficheiros partilhados evita muitos conflitos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">Git Academy</div>
+      <div class="footer-team">
+        <span>Gustavo Pires· Introdução</span>
+        <span>Ray Davyd · Comandos</span>
+        <span>Luciana Silva · Branches</span>
+        <span>Luan Ribeiro · GitHub</span>
+      </div>
+    </div>
+    <div class="footer-bottom">Projeto académico — Guia de Git &amp; GitHub © 2026</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+    
+</body>
+</html>
